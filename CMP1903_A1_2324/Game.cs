@@ -12,21 +12,19 @@ namespace CMP1903_A1_2324
             int i = 1;
             var list = new List<int> { }; ///List is for calculating the sum.
 
-            /*amountToRoll
-            var can be set to any value, and this is how many die will be rolled.*/
-            int amountToRoll = 3;
+            private static Die die = new Die();
+            private static Testing debug = new Testing(); //Create Objects
+
             /*Rolls Dice
             Simple loop while roll the dice x amount of times, adding each roll to a list. */
-            while (i <= amountToRoll)
+            
+            for (int i = 0; i < 3; i++)
             {
-                Die die = new Die();
-                Testing debug = new Testing();
                 int roll = die.Roll();
-                Console.WriteLine($"Dice " + i + ": " + roll);
+                Console.WriteLine($"Dice " + i + ": " + roll); // Roll Dice and report Value
+                
                 debug.Assert(roll);
-                list.Add(roll);
-                System.Threading.Thread.Sleep(1); ///Sleep allows program to Create new Object.
-                i++;
+                list.Add(roll); //check if the roll is the correct value, if so add to sum list. 
             }
 
             /*Print Sum
