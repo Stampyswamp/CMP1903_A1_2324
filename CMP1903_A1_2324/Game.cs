@@ -32,8 +32,7 @@ namespace CMP1903_A1_2324
             /*Print Sum
             Each diceroll in the list will be added to the sum.*/
             Testing sumCheck = new Testing();
-            int sum = 0;
-            foreach (var item in list) { sum += item; }
+            int sum = list.Sum(Convert.ToInt32());
             Console.WriteLine($"\nSum: {sum}");
             sumCheck.AssertSum(sum);
         }
