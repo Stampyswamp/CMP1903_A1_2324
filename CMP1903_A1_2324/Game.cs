@@ -21,7 +21,7 @@ namespace CMP1903_A1_2324
             {
                 Die die = new Die();
                 Testing debug = new Testing();
-                int roll = die.throwDice();
+                int roll = die.Roll();
                 Console.WriteLine($"Dice " + i + ": " + roll);
                 debug.Assert(roll);
                 list.Add(roll);
