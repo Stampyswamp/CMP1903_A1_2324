@@ -9,7 +9,7 @@ namespace CMP1903_A1_2324
         /// Produces a random roll 1-6. if (parameter is changed && and num > 6 is rolled) {debug class will flag this.} (not real code)
         /// </summary>
         /// <returns> Returns roll which is a random number 1-6. </returns> 
-        public int throwDice()
+        public int Roll()
         {
             int roll = rnd.Next(1, 7); ///Should be 1-7 as base. Otherwise to check for error handling set to anything.
             return roll;
