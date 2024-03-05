@@ -12,7 +12,6 @@ namespace CMP1903_A1_2324
                 Console.Write("Roll Dice? (Y/N) ");
                 Console.ForegroundColor = ConsoleColor.White;
                 string RollAgain = Console.ReadLine();
-                System.Threading.Thread.Sleep(1);
 
                 //Switch is a way of taking in inputs and doing something with them. AKA guard clause (Making Sure the input is what you want, otherwise Handling It.)
                 switch (RollAgain)
@@ -20,7 +19,6 @@ namespace CMP1903_A1_2324
                     case "Y": ///If Y is Entered, the Object will be created and the Game will be Carried Out.
                         Game game = new Game();
                         game.Gameloop();
-                        System.Threading.Thread.Sleep(1);
                         continue;
                     case "N": ///If N is Entered, The Object will not be created and the Program will Exit.
                         break;
