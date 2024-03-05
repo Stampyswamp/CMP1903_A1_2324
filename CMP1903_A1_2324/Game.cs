@@ -5,25 +5,23 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+        private static Die die = new Die();
+        private static Testing debug = new Testing(); //Create Objects
+
         public void Gameloop()
         {
             //declare var
             var list = new List<int> { }; ///List is for calculating the sum.
-        
-            Testing debug = new Testing(); //Create Object
-        
+
             /*Rolls Dice
-            Simple loop while roll the dice x amount of times, adding each roll to a list. */
-        
+            Simple for loop roll the dice x amount of times, reporting and adding each roll to a list. */
             for (int i = 1; i< 4; i++)
             {
-                Die die = new Die();
+                
                 int roll = die.Roll();
-                System.Threading.Thread.Sleep(roll);  //Creates Die Object. Rolls Dice. Waits 1-6ms.
-        
                 Console.WriteLine($"Dice " + i + ": " + roll); // Roll Dice and report Value
         
-                debug.Assert(roll,3);
+                debug.Assert(roll,3); //function will run the built-in debug.assert().
                 list.Add(roll); //check if the roll is the correct value, if so add to sum list. 
             }
         
