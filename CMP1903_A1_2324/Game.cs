@@ -9,7 +9,6 @@ namespace CMP1903_A1_2324
         {
 
             //declare var
-            int i = 1;
             var list = new List<int> { }; ///List is for calculating the sum.
 
             private static Die die = new Die();
@@ -18,7 +17,7 @@ namespace CMP1903_A1_2324
             /*Rolls Dice
             Simple loop while roll the dice x amount of times, adding each roll to a list. */
             
-            for (int i = 0; i < 3; i++)
+            for (int i = 1; i < 4; i++)
             {
                 int roll = die.Roll();
                 Console.WriteLine($"Dice " + i + ": " + roll); // Roll Dice and report Value
