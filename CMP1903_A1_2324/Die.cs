@@ -5,7 +5,7 @@ namespace CMP1903_A1_2324
     internal class Die
     {
         private int roll;
-        public int Roll //encapsulates value.
+        public int Rolled //encapsulates value.
         {
             get { return roll; }
             set { roll = value; }
